@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: rajesh-finalapp
+  name: rajesh-finalapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rajesh-finalapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: rajesh-finalapp
+    spec:
+      containers:
+      - image: rajeshjindal/rajeshmobiwebapp:5
+        name: rajeshmobiwebapp
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
